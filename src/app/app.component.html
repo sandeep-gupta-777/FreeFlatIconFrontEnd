@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+
+<app-header-component ></app-header-component>
+<div class="wrapper">
+  <!--<app-sidebar></app-sidebar>-->
+  <!--<app-image-side-panel style="position: fixed;"></app-image-side-panel>-->
+  <router-outlet></router-outlet>
+</div>
+<app-footer-component></app-footer-component>
+
+<text-editor [elementId]="'post-body'" (onEditorKeyup)="onBodyTextEditorKeyUp($event)"></text-editor>
+
+<br>
+
+<div [innerHTML]="blogContent"> </div>
+{{blogContent}}
+<br>
+
+<button (click)="doSomething()"> click me!</button>

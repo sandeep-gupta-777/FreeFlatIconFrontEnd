@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+/*Following will go to: C:\Users\sandgup3\Desktop\NodeBook\FreeFlatIcon\public\stylesheets\style.css*/
+body{
+  background-image: url('https://static.pexels.com/photos/355465/pexels-photo-355465.jpeg');
+}
+* {
+  border-radius: 0 !important;
+}
+.language-javascript{
+  border: 1px solid black;
+}

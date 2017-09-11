@@ -1,0 +1,49 @@
+<br><br><br><br><br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-1 pull-right">
+        <button class="btn btn-primary" (click)="updateBlogOnServer()">Update</button>
+     </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="form-group">
+        <label for="Title" style="color: white">Title</label>
+        <input type="text" class="form-control" [(ngModel)]="blogTitle">
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li [ngClass]="{'active':showEditorBoolean}" (click)="showEditor()"><a href="#">Visual</a></li>
+    <li [ngClass]="{'active':showHTMLBoolean}" (click)="showHTML()"><a href="#">HTML</a></li>
+
+  </ul>
+  <br>
+  <!--Text editor begins-->
+  <div *ngIf="showEditorBoolean">
+    <label style="color: white">Body</label>
+    <textarea id="{{elementId}}"></textarea>
+  </div>
+  <div class="row">
+    <!--Text editor begins-->
+
+    <!--HTML begins-->
+    <div *ngIf="showHTMLBoolean">
+      <div class="form-group">
+        <label for="Title" style="color: white">Title</label>
+        <!--<textarea style="height: 500px" [value]=" blogContent" ngModel="blogContent" class="form-control"></textarea>-->
+        <textarea style="height: 500px" [(ngModel)]="blogContent" class="form-control"></textarea>
+      </div>
+
+    </div>
+    <!--HTML ends-->
+
+
+  </div>
+</div>
+
+<!--this is for extra spacing below the editor-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
